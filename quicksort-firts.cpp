@@ -1,5 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+const int N = 1010, MOD = 100000007;
+
+int f[N];
 // 交换两个元素
 void swap(int& a, int& b) {
     int temp = a;
@@ -44,14 +47,29 @@ void printArray(int arr[], int size) {
 }
 
 int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    std::cout << "Unsorted array: ";
-    printArray(arr, n);
+    // int arr[] = {10, 7, 8, 9, 1, 5};
+    // int n = sizeof(arr) / sizeof(arr[0]);
+    // std::cout << "Unsorted array: ";
+    // printArray(arr, n);
     
-    quickSort(arr, 0, n - 1);
+    // quickSort(arr, 0, n - 1);
     
-    std::cout << "Sorted array: ";
-    printArray(arr, n);
-    return 0;
-}
+    // std::cout << "Sorted array: ";
+    // printArray(arr, n);
+    int l=0;
+
+    cin>>l;
+    for(int i=0;i<l;i++) cin>>f[i];
+    printArray(f,l);
+    
+
+    quickSort(f,0,l-1);
+    cout<<"sorted array";
+    printArray(f,l);
+    
+
+
+
+
+     return 0;
+ }
