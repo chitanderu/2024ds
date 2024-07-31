@@ -14,7 +14,7 @@ void swap(int& a, int& b) {
 int partition(int arr[], int low, int high) {
     int pivot = arr[high]; // 选择最后一个元素作为枢轴
     int i = low - 1; // i是较小元素的索引
-
+    cout<<"index "<<i<<endl;
     for (int j = low; j < high; j++) {
         // 如果当前元素小于或等于枢轴
         if (arr[j] <= pivot) {
@@ -47,6 +47,8 @@ void printArray(int arr[], int size) {
 }
 
 int main() {
+
+
     // int arr[] = {10, 7, 8, 9, 1, 5};
     // int n = sizeof(arr) / sizeof(arr[0]);
     // std::cout << "Unsorted array: ";
@@ -56,6 +58,7 @@ int main() {
     
     // std::cout << "Sorted array: ";
     // printArray(arr, n);
+
     int l=0;
 
     cin>>l;
