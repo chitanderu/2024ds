@@ -18,7 +18,7 @@ void sortbubble(int a[])
 {
   for(int i=1;i<=len-1;i++)
   {  
-    for(int j=1;j<=len-1;j++)
+    for(int j=1;j<=len-i;j++)
        {  if(a[j]<a[j+1])
             {
                 swap1(a[j],a[j+1]);

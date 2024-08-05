@@ -35,6 +35,11 @@ void quciksort(int f[],int l,int r){
 
 }
 
+void mergesort()
+{
+    
+}
+
 
 
 
@@ -54,7 +59,7 @@ int main()
    
     
 
-   quciksort(f,0,len-1);
+  
     
 
     
