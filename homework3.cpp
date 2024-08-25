@@ -74,6 +74,40 @@ void merge_sort(int nums[],int l,int r)
 }
 
 
+void merge_sort(int f[],int left,int right)
+{   
+   if(left>=right) return;
+   int mid=left+right>>1;
+
+   merge_sort(f,left,mid);
+
+   merge_sort(f,mid+1,right);
+   
+   int i=right;
+   int j=mid+1;
+   int k=0;
+
+   while(i<=mid && j<=right)
+   {   
+      if(f[i]<=f[j])
+        temp[k++]=f[i++];
+      else
+        temp[k++]=f[j++];
+
+           
+     while(i<=mid)  temp[k++]=f[i++];
+     while(j<=right)    temp[k++]=f[j++]
+       
+   
+    
+   }
+
+
+
+    
+
+}
+
 
 
 
