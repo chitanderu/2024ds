@@ -74,16 +74,16 @@ void merge_sort(int nums[],int l,int r)
 }
 
 
-void merge_sort(int f[],int left,int right)
+void merge_sort1(int f[],int left,int right)
 {   
    if(left>=right) return;
    int mid=left+right>>1;
 
-   merge_sort(f,left,mid);
+   merge_sort1(f,left,mid);
 
-   merge_sort(f,mid+1,right);
+   merge_sort1(f,mid+1,right);
    
-   int i=right;
+   int i=left;
    int j=mid+1;
    int k=0;
 
@@ -96,16 +96,15 @@ void merge_sort(int f[],int left,int right)
 
            
      while(i<=mid)  temp[k++]=f[i++];
-     while(j<=right)    temp[k++]=f[j++]
+     while(j<=right)    temp[k++]=f[j++];
        
    
     
    }
-
-
-
     
-
+    for(int i=left,j=0;i<=right;i++,j++) f[i]=temp[j] ;
+   
+    return ;
 }
 
 
@@ -127,12 +126,15 @@ int main()
     
  
     //quciksort(f,0,len-1); 
-    merge_sort(f,0,len-1);
+    merge_sort1(f,0,len-1);
 
     
    
     
    for(int i=0;i<len;i++) cout<<f[i]<<" ";
+
+
+   
 
      return 0;
 
